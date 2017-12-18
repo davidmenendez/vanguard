@@ -1,0 +1,19 @@
+input[type=text],
+input[type=email],
+input[type=number], {
+  font: inherit;
+  line-height: 1.4;
+  border: 1px solid #aaa;
+  display: block;
+  width: 100%;
+  padding: .5rem 1rem;
+}
+
+label {
+  margin-bottom: .25rem;
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}

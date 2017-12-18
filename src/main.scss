@@ -1,0 +1,49 @@
+@import 'styles/vars';
+@import 'styles/typography';
+@import 'styles/forms';
+@import 'styles/buttons';
+@import 'styles/cols';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.4;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+main {
+  flex: 1;
+  padding: 3rem 0;
+  background: $blue;
+  color: #fff;
+}
+
+.app {
+  padding: 1rem 0;
+}
+
+footer {
+  background: #333;
+  color: $blue;
+  padding: 1rem 0;
+}

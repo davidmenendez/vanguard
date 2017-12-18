@@ -1,0 +1,25 @@
+.row {
+  display: flex;
+  margin: 0 -1rem;
+  flex-wrap: wrap;
+}
+
+.col {
+  max-width: 100%;
+  padding: 0 1rem;
+  flex: 1 0 100%;
+  @include breakpoint(sm) {
+    flex: 1 1 0;
+  }
+  @for $i from 1 through 12 {
+    &-#{$i} {
+      max-width: 100%;
+      padding: 0 1rem;
+      flex: 1 0 100%;
+      @include breakpoint(sm) {
+        max-width: ($i / 12) * 100%;
+        flex: 0 0 ($i / 12) * 100%;
+      }
+    }
+  }
+}
