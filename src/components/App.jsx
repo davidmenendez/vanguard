@@ -1,6 +1,8 @@
 import React from 'react';
 import Skill from './Skill';
 import shortid from 'shortid';
+import States from '../utils/States';
+console.log(States, Array.isArray(States), typeof States);
 
 export default class App extends React.Component {
   constructor() {
@@ -9,6 +11,8 @@ export default class App extends React.Component {
       firstName: '',
       lastName: '',
       email: '',
+      city: '',
+      state: '',
       skills: [{
         skill: '',
         exp: '',
@@ -85,7 +89,8 @@ export default class App extends React.Component {
 
     return (
       <div>
-        <p>provide your information</p>
+        <h3>provide your information</h3>
+        <h4>personal</h4>
         <div className="row">
           <div className="form-group col">
             <label htmlFor="firstName">First Name</label>
@@ -100,6 +105,24 @@ export default class App extends React.Component {
             <input type="email" placeholder="Email" id="email" name="email" onChange={this.setInfo} />
           </div>
         </div>
+        <div className="row">
+          <div className="form-group col">
+            <label htmlFor="city">City</label>
+            <input type="text" placeholder="city" id="city" name="city" onChange={this.setInfo} />
+          </div>
+          <div className="form-group col">
+            <label htmlFor="state">State</label>
+            <select id="state" name="state" onChange={this.setInfo} defaultValue="Select State">
+              {States.GetStates.map((s, i) => (
+                <option
+                  key={i} disabled={i === 0 ? true : false}>
+                  {s}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+        <h4>skills</h4>
         {skills}
         <div className="row">
           <div className="form-group col-12">

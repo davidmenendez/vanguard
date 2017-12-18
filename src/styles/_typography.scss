@@ -1,17 +1,26 @@
 h1,
 h2,
-h3 {
+h3,
+h4 {
   line-height: 1.1;
   margin-bottom: .5rem;
   font-weight: 300;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3.842rem;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.744rem;
+}
+
+h3 {
+  font-size: 1.96rem;
+}
+
+h4 {
+  font-size: 1.4rem;
 }
 
 p {
@@ -21,4 +30,8 @@ p {
 small {
   font-size: 1rem;
   font-weight: 300;
+}
+
+.jumbo {
+  font-size: 5.378rem;
 }

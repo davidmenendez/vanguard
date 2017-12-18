@@ -9,6 +9,19 @@ input[type=number], {
   padding: .5rem 1rem;
 }
 
+select {
+  font: inherit;
+  line-height: 1.4;
+  border: 1px solid #aaa;
+  display: block;
+  width: 100%;
+  padding: .5rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
 label {
   margin-bottom: .25rem;
   display: block;
