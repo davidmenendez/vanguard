@@ -112,7 +112,7 @@ export default class App extends React.Component {
           </div>
           <div className="form-group col">
             <label>State</label>
-            <Select data={stateList} id="state" name="state" defaultValue="Florida" onChange={this.setInfo} />
+            <Select data={stateList} id="state" name="state" placeholder="State" onChange={this.setInfo} />
           </div>
         </div>
         <h4>skills</h4>
