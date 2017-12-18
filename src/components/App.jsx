@@ -1,8 +1,8 @@
 import React from 'react';
 import Skill from './Skill';
 import shortid from 'shortid';
-import States from '../utils/States';
-console.log(States, Array.isArray(States), typeof States);
+import Select from './Select';
+import stateList from '../utils/states.json';
 
 export default class App extends React.Component {
   constructor() {
@@ -111,15 +111,8 @@ export default class App extends React.Component {
             <input type="text" placeholder="city" id="city" name="city" onChange={this.setInfo} />
           </div>
           <div className="form-group col">
-            <label htmlFor="state">State</label>
-            <select id="state" name="state" onChange={this.setInfo} defaultValue="Select State">
-              {States.GetStates.map((s, i) => (
-                <option
-                  key={i} disabled={i === 0 ? true : false}>
-                  {s}
-                </option>
-              ))}
-            </select>
+            <label>State</label>
+            <Select data={stateList} id="state" name="state" defaultValue="Florida" onChange={this.setInfo} />
           </div>
         </div>
         <h4>skills</h4>
