@@ -8,6 +8,9 @@ const Select = (props) => (
     name={props.name}
     id={props.id}
   >
+    {props.placeholder && 
+      <option disabled hidden>{props.placeholder}</option>
+    }
     {props.data.map(d => <option key={d.id}>{d.value}</option>)}
   </select>
 );
