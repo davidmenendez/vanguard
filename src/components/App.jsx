@@ -76,7 +76,6 @@ export default class App extends React.Component {
   }
 
   render() {
-    const canAdd = this.canAdd();
     const skills = this.state.skills.map((s, i) => (
       <Skill
         key={s.id}
@@ -84,6 +83,7 @@ export default class App extends React.Component {
         position={i}
         onChange={this.editSkill}
         delete={this.deleteSkill}
+        canDelete={this.state.skills.length > 1}
       />
     ));
 
@@ -119,7 +119,7 @@ export default class App extends React.Component {
         {skills}
         <div className="row">
           <div className="form-group col-12">
-            <button disabled={!canAdd} className="button button-secondary" onClick={this.addSkill}>add</button>
+            <button disabled={!this.canAdd()} className="button button-secondary" onClick={this.addSkill}>add</button>
           </div>
         </div>
       </div>

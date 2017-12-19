@@ -10,7 +10,7 @@ const Skill = (props) => (
       <label>Experience</label>
       <input type="number" placeholder="Years" name="exp" onChange={(e) => props.onChange(e, props.id)} />
     </div>
-    {props.position !== 0 &&
+    {props.canDelete &&
       <div className="form-group col-2">
         <label>delete</label>
         <button className="button button-danger" onClick={(e) => props.delete(e, props.position)}>delete</button>
