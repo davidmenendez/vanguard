@@ -87,8 +87,10 @@ export default class App extends React.Component {
 
   doRequest(e) {
     e.preventDefault();
+    const user = Object.assign({}, this.state);
+    delete user.showModal;
     Request({
-      body: this.state,
+      body: user,
       url: '/api/user',
       method: 'POST',
     }).then(data => {

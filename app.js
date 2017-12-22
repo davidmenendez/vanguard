@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/api/user', (req, res) => {
-  res.send('user created');
+  res.status(200).send('user created');
 });
 
 app.get('*', (req, res) => {
