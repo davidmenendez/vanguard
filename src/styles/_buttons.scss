@@ -6,10 +6,12 @@
   border: 0;
   cursor: pointer;
   transition: all 300ms ease;
+
   &-block {
     display: block;
     width: 100%;
   }
+
   &-primary {
     background: $blue;
     color: #fff;
@@ -17,6 +19,7 @@
       background: $blue-hover;
     }
   }
+
   &-secondary {
     background: #fff;
     color: #333;
@@ -24,6 +27,7 @@
       background: #ddd;
     }
   }
+
   &-danger {
     background: $red;
     color: #fff;
@@ -31,6 +35,7 @@
       background: #CC6950;
     }
   }
+  
   &:disabled {
     background: #ccc;
     color: #888;
